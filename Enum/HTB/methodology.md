@@ -31,7 +31,7 @@ Aquí se exponen algunos de los puertos más conocidos y los métodos para obten
 
 Enum4linux is a tool for enumerating information from Windows and Samba systems.
 
-```bash
+```console
 security@beginners:~$ enum4linux [Options] <IP>
 ```
 
@@ -75,7 +75,7 @@ Additional options:
 
 The tool is designed as a password dictionary attack tool that targets windows authentication via the SMB protocol. <https://github.com/qashqao/acccheck> for more information.
 
-```bash
+```console
 security@beginners:~$ ./acccheck.pl -t IP -U <users_dictionary> -P <pass_dictionary> -v
 ```
 
@@ -83,13 +83,13 @@ security@beginners:~$ ./acccheck.pl -t IP -U <users_dictionary> -P <pass_diction
 
 Shared folder list:
 
-```bash
+```console
 security@beginners:~$ smbclient -L <IP> -U <user>%<password>
 ```
 
 Connect:
 
-```bash
+```console
 security@beginners:~$ smbclient //<ip>/<folder>$ -U <user>%<password>
 ```
 
@@ -97,7 +97,7 @@ security@beginners:~$ smbclient //<ip>/<folder>$ -U <user>%<password>
 
 ### LDAP
 
-```bash
+```console
 security@beginners:~$ nmap -p 389 --script ldap-search <IP>
 ```
 
